@@ -484,7 +484,7 @@ p {
    ========================= */
 
 .section {
-  padding: 4.2rem 0;
+  padding: 5.2rem 0;
 }
 
 .section-heading {
@@ -2107,29 +2107,6 @@ p {
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-#pricing,
-#services,
-#projects,
-#process,
-#contact,
-#faq {
-  scroll-margin-top: 110px;
-}
-
-@media (max-width: 768px) {
-  #pricing {
-    scroll-margin-top: 95px;
-  }
-
-  .pricing.section {
-    padding-top: 2.6rem;
-  }
-}
-
 
 /* =========================
    FINAL SPACING + ANCHOR FIX
@@ -2141,11 +2118,18 @@ html {
 #process,
 #contact,
 #faq {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 72px;
 }
 
-.pricing.section {
-  padding-top: 3.2rem;
+.pricing.section,
+.contact.section,
+.faq.section,
+.testimonials.section {
+  padding-top: 2.4rem;
+}
+
+.process.section {
+  padding-top: 1.2rem;
 }
 
 @media (max-width: 768px) {
@@ -2155,10 +2139,17 @@ html {
   #process,
   #contact,
   #faq {
-    scroll-margin-top: 82px;
+    scroll-margin-top: 68px;
   }
 
-  .pricing.section {
-    padding-top: 2.2rem;
+  .pricing.section,
+  .contact.section,
+  .faq.section,
+  .testimonials.section {
+    padding-top: 1.8rem;
+  }
+
+  .process.section {
+    padding-top: 0.9rem;
   }
 }
