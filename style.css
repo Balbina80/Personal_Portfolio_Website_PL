@@ -2106,3 +2106,26 @@ p {
     animation-duration: 6.5s;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+#pricing,
+#services,
+#projects,
+#process,
+#contact,
+#faq {
+  scroll-margin-top: 110px;
+}
+
+@media (max-width: 768px) {
+  #pricing {
+    scroll-margin-top: 95px;
+  }
+
+  .pricing.section {
+    padding-top: 2.6rem;
+  }
+}
