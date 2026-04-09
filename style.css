@@ -484,7 +484,7 @@ p {
    ========================= */
 
 .section {
-  padding: 5.2rem 0;
+  padding: 4.2rem 0;
 }
 
 .section-heading {
@@ -2127,5 +2127,38 @@ html {
 
   .pricing.section {
     padding-top: 2.6rem;
+  }
+}
+
+
+/* =========================
+   FINAL SPACING + ANCHOR FIX
+   ========================= */
+
+#pricing,
+#services,
+#projects,
+#process,
+#contact,
+#faq {
+  scroll-margin-top: 96px;
+}
+
+.pricing.section {
+  padding-top: 3.2rem;
+}
+
+@media (max-width: 768px) {
+  #pricing,
+  #services,
+  #projects,
+  #process,
+  #contact,
+  #faq {
+    scroll-margin-top: 82px;
+  }
+
+  .pricing.section {
+    padding-top: 2.2rem;
   }
 }
