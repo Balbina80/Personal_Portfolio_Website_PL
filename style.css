@@ -18,9 +18,9 @@
   --border: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(245, 166, 35, 0.22);
 
-  --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-  --shadow-soft: 0 12px 28px rgba(0, 0, 0, 0.22);
-  --shadow-glow: 0 20px 45px rgba(245, 166, 35, 0.12);
+  --shadow: 0 16px 36px rgba(0, 0, 0, 0.26);
+  --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.18);
+  --shadow-glow: 0 16px 36px rgba(245, 166, 35, 0.08);
 
   --radius: 24px;
   --radius-lg: 28px;
@@ -93,15 +93,15 @@ p {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: rgba(31, 35, 44, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  background: rgba(31, 35, 44, 0.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
 }
 
 .nav-wrapper {
-  min-height: 82px;
+  min-height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,7 +118,7 @@ p {
 }
 
 .logo {
-  height: 95px;
+  height: 72px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -298,7 +298,7 @@ p {
    ========================= */
 
 .hero {
-  padding: 6.4rem 0 5.4rem;
+  padding: 5.6rem 0 4.2rem;
   position: relative;
 }
 
@@ -342,19 +342,19 @@ p {
 }
 
 .hero h1 {
-  font-size: clamp(2.45rem, 3.3vw, 3.4rem);
-  line-height: 1.05;
+  font-size: clamp(2.5rem, 3.2vw, 3.45rem);
+  line-height: 1.04;
   margin-bottom: 1rem;
-  max-width: 15ch;
+  max-width: 16ch;
   color: var(--white);
-  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.22);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.16);
 }
 
 .hero-lead {
   font-size: 1rem;
-  max-width: 58ch;
-  margin-bottom: 1.9rem;
-  color: rgba(255, 255, 255, 0.84);
+  max-width: 56ch;
+  margin-bottom: 1.7rem;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .hero-buttons {
@@ -377,7 +377,7 @@ p {
 .contact-box,
 .pricing-card,
 .testimonial-card {
-  background: linear-gradient(180deg, var(--bg-card), var(--bg-card-2));
+  background: linear-gradient(180deg, rgba(38, 43, 53, 0.96), rgba(43, 48, 59, 0.96));
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
@@ -442,8 +442,8 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 0.9rem 1.45rem;
+  min-height: 50px;
+  padding: 0.95rem 1.5rem;
   border-radius: 999px;
   font-family: 'Inter', sans-serif;
   font-size: 0.92rem;
@@ -460,11 +460,27 @@ p {
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-deep));
   color: #161a21;
-  box-shadow: 0 12px 30px rgba(245, 166, 35, 0.28);
+  box-shadow: 0 8px 20px rgba(245, 166, 35, 0.18);
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.16), transparent 62%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .btn-primary:hover {
-  box-shadow: 0 16px 36px rgba(245, 166, 35, 0.35);
+  box-shadow: 0 10px 24px rgba(245, 166, 35, 0.22);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
 }
 
 .btn-outline {
@@ -484,13 +500,13 @@ p {
    ========================= */
 
 .section {
-  padding: 5.2rem 0;
+  padding: 3.5rem 0;
 }
 
 .section-heading {
   text-align: center;
   max-width: 720px;
-  margin: 0 auto 2.7rem;
+  margin: 0 auto 1.75rem;
 }
 
 .section-heading h2,
@@ -527,6 +543,23 @@ p {
   background:
     radial-gradient(circle at top right, rgba(245, 166, 35, 0.08), transparent 24%),
     linear-gradient(180deg, var(--bg-card), var(--bg-card-2));
+}
+
+
+.section-card,
+.service-card,
+.why-card,
+.pricing-card,
+.testimonial-card,
+.project-card,
+.contact-box,
+.hero-highlights-box {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.section-heading h2 {
+  text-wrap: balance;
 }
 
 /* =========================
@@ -639,9 +672,9 @@ p {
 .why-card:hover,
 .pricing-card:hover,
 .testimonial-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-glow), var(--shadow);
-  border-color: rgba(245, 166, 35, 0.28);
+  border-color: rgba(245, 166, 35, 0.22);
 }
 
 .project-image {
@@ -870,12 +903,12 @@ p {
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.4rem;
+  gap: 1rem;
   align-items: stretch;
 }
 
 .service-card {
-  padding: 1.55rem;
+  padding: 1.4rem;
   position: relative;
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
@@ -908,9 +941,9 @@ p {
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: stretch;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 .pricing-card {
@@ -1020,7 +1053,7 @@ p {
 .why-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.4rem;
+  gap: 1rem;
   align-items: stretch;
 }
 
@@ -1058,12 +1091,12 @@ p {
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .testimonial-card {
   position: relative;
-  padding: 1.8rem;
+  padding: 1.6rem;
   overflow: hidden;
   transition: all 0.25s ease;
 }
@@ -1120,7 +1153,7 @@ p {
 .contact-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   background:
     radial-gradient(circle at top right, rgba(245, 166, 35, 0.14), transparent 24%),
     linear-gradient(180deg, #2c313d, #232833);
@@ -1532,6 +1565,18 @@ p {
 
 @media (max-width: 768px) {
 
+  .hero {
+    padding: 4.8rem 0 3.4rem;
+  }
+
+  .section-heading {
+    margin-bottom: 1.6rem;
+  }
+
+  .contact-box {
+    gap: 1.2rem;
+  }
+
   .cta-premium {
     padding: 2.5rem 0;
   }
@@ -1563,6 +1608,33 @@ p {
     font-size: 0.82rem;
   }
 }
+
+/* =========================
+   SPACING SYSTEM
+   ========================= */
+
+.services.section + .section.reveal-fade {
+  padding-top: 1.8rem;
+  padding-bottom: 1.9rem;
+}
+
+.services.section + .section.reveal-fade .section-heading {
+  margin-bottom: 0;
+  max-width: 820px;
+}
+
+.section.reveal-fade + .pricing.section {
+  padding-top: 2.5rem;
+}
+
+.process.section {
+  padding-top: 3rem;
+}
+
+.contact.section {
+  padding-top: 3rem;
+}
+
 /* =========================
    ANIMATIONS
    ========================= */
@@ -1602,7 +1674,7 @@ p {
    RESPONSIVE
    ========================= */
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .hero-grid,
   .two-col,
   .contact-box {
@@ -1647,12 +1719,27 @@ p {
 }
 
 @media (max-width: 900px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .services.section + .section.reveal-fade {
+    padding-top: 1.7rem;
+    padding-bottom: 1.9rem;
+  }
+
+  .section.reveal-fade + .pricing.section,
+  .process.section,
+  .contact.section {
+    padding-top: 2.6rem;
+  }
+
   .site-header {
     background: rgba(31, 35, 44, 0.92);
   }
 
   .nav-wrapper {
-    min-height: 82px;
+    min-height: 76px;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
@@ -1778,13 +1865,13 @@ p {
   }
 
   .hero {
-    padding-top: 3.4rem;
+    padding-top: 3rem;
   }
 }
 
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.1rem;
+    font-size: 2.15rem;
   }
 
   .projects-grid,
@@ -1823,7 +1910,7 @@ p {
   }
 
   .section {
-    padding: 4.2rem 0;
+    padding: 2.85rem 0;
   }
 
   .contact-box {
@@ -1911,7 +1998,7 @@ p {
   }
 
   .hero {
-    padding: 2.8rem 0 4rem;
+    padding: 2.5rem 0 3.2rem;
   }
 
   .hero-buttons {
@@ -2107,49 +2194,13 @@ p {
   }
 }
 
-
-/* =========================
-   FINAL SPACING + ANCHOR FIX
-   ========================= */
-
-#pricing,
-#services,
-#projects,
-#process,
-#contact,
-#faq {
-  scroll-margin-top: 72px;
+/* Audience section keeps same premium rhythm */
+.audience-grid .service-card h3 {
+  min-height: 2.5em;
 }
 
-.pricing.section,
-.contact.section,
-.faq.section,
-.testimonials.section {
-  padding-top: 2.4rem;
-}
-
-.process.section {
-  padding-top: 1.2rem;
-}
-
-@media (max-width: 768px) {
-  #pricing,
-  #services,
-  #projects,
-  #process,
-  #contact,
-  #faq {
-    scroll-margin-top: 68px;
-  }
-
-  .pricing.section,
-  .contact.section,
-  .faq.section,
-  .testimonials.section {
-    padding-top: 1.8rem;
-  }
-
-  .process.section {
-    padding-top: 0.9rem;
+@media (max-width: 900px) {
+  .audience-grid .service-card h3 {
+    min-height: 0;
   }
 }
