@@ -2376,3 +2376,23 @@ p {
   object-position: center;
   padding: 10px;
 }
+
+/* === TESTIMONIAL LOGOS – FINAL ALIGNMENT === */
+
+.testimonial-logo-wrap {
+  height: 120px;                
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.testimonial-logo-wrap img {
+  max-height: 100%;
+  max-width: 220px;
+  object-fit: contain;
+}
+
+.testimonial-logo-wrap img {
+  filter: drop-shadow(0 0 10px rgba(212,163,74,0.15));
+}
