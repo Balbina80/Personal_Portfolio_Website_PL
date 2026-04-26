@@ -2471,3 +2471,22 @@ p {
 .premium-testimonials .testimonials-grid {
   margin-top: 20px;
 }
+
+/* === SMALL BUSINESS HERO WITH IMAGE === */
+
+.small-business-hero .hero-copy {
+  max-width: 560px;
+}
+
+.small-business-hero .hero-copy h1 {
+  max-width: 12ch;
+}
+
+.seo-cards-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.seo-cards-section .why-grid {
+  margin-top: 36px;
+}
