@@ -2396,3 +2396,17 @@ p {
 .testimonial-logo-wrap img {
   filter: drop-shadow(0 0 10px rgba(212,163,74,0.15));
 }
+
+.internal-link-note {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.internal-link-note a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
