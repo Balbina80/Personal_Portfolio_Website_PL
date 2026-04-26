@@ -2380,7 +2380,7 @@ p {
 /* === TESTIMONIAL LOGOS – FINAL ALIGNMENT === */
 
 .testimonial-logo-wrap {
-  height: 120px;                
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2391,114 +2391,11 @@ p {
   max-height: 100%;
   max-width: 220px;
   object-fit: contain;
-}
-
-.testimonial-logo-wrap img {
   filter: drop-shadow(0 0 10px rgba(212,163,74,0.15));
 }
 
-.internal-link-note {
-  margin-top: 20px;
-  color: var(--muted);
-  font-size: 0.96rem;
-  line-height: 1.7;
-}
+/* === INTERNAL LINKS – PREMIUM GLOW === */
 
-.internal-link-note a {
-  color: var(--accent);
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.small-business-hero {
-  padding: clamp(150px, 14vw, 190px) 0 clamp(70px, 8vw, 110px);
-  min-height: auto;
-}
-
-.small-business-hero .hero-content {
-  min-height: auto;
-  justify-content: center;
-  text-align: center;
-  padding: 0;
-}
-
-.small-business-hero .hero-copy {
-  max-width: 900px;
-  margin: 0 auto;
-  transform: none;
-}
-
-.small-business-hero .hero-copy h1 {
-  max-width: 14ch;
-  margin: 0 auto;
-}
-
-.small-business-hero .hero-copy .lead {
-  max-width: 62ch;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.small-business-hero .hero-copy .lead::before {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.small-business-hero .hero-buttons {
-  justify-content: center;
-}
-
-/* === TESTIMONIALS SPACING FIX (premium look) === */
-
-.premium-testimonials {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.premium-testimonials .testimonials-title {
-  margin-bottom: 18px;
-}
-
-.premium-testimonials .testimonials-intro {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 40px;
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-.premium-testimonials .testimonials-grid {
-  margin-top: 20px;
-}
-
-
-/* === SMALL BUSINESS LANDING PAGE FINAL POLISH === */
-
-/* Hero with image */
-.small-business-hero {
-  min-height: 100svh;
-}
-
-.small-business-hero .hero-content {
-  align-items: center;
-}
-
-.small-business-hero .hero-copy {
-  max-width: 560px;
-  margin-left: 40px;
-}
-
-.small-business-hero .hero-copy h1 {
-  max-width: 12ch;
-}
-
-.small-business-hero .hero-media img {
-  width: clamp(380px, 42vw, 520px);
-  border-radius: 18px;
-}
-
-/* Premium internal links */
 .internal-link-note {
   margin-top: 24px;
   color: var(--muted);
@@ -2535,7 +2432,55 @@ p {
   height: 2px;
 }
 
-/* Card sections */
+/* === TESTIMONIALS SPACING FIX === */
+
+.premium-testimonials {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.premium-testimonials .testimonials-title {
+  margin-bottom: 18px;
+}
+
+.premium-testimonials .testimonials-intro {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.premium-testimonials .testimonials-grid {
+  margin-top: 20px;
+}
+
+/* === SMALL BUSINESS LANDING PAGE ONLY === */
+
+.small-business-hero {
+  min-height: 100svh;
+}
+
+.small-business-hero .hero-content {
+  align-items: center;
+}
+
+.small-business-hero .hero-copy {
+  max-width: 560px;
+  margin-left: 40px;
+}
+
+.small-business-hero .hero-copy h1 {
+  max-width: 12ch;
+}
+
+.small-business-hero .hero-media img {
+  width: clamp(380px, 42vw, 520px);
+  border-radius: 18px;
+}
+
+/* === SEO LANDING CARD SECTIONS === */
+
 .features-section,
 .audience-section,
 .process-section,
@@ -2589,7 +2534,8 @@ p {
   box-shadow: 0 26px 70px rgba(0, 0, 0, 0.34);
 }
 
-/* Responsive */
+/* === RESPONSIVE FIXES === */
+
 @media (max-width: 980px) {
   .features-grid,
   .process-grid {
@@ -2623,3 +2569,198 @@ p {
     max-width: 11ch;
   }
 }
+
+/* === TESTIMONIAL LOGOS – FINAL ALIGNMENT === */
+
+.testimonial-logo-wrap {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.testimonial-logo-wrap img {
+  max-height: 100%;
+  max-width: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(212,163,74,0.15));
+}
+
+/* === INTERNAL LINKS – PREMIUM GLOW === */
+
+.internal-link-note {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.internal-link-note a {
+  position: relative;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 0 0 14px rgba(212, 163, 74, 0.22);
+}
+
+.internal-link-note a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.75;
+  transition: opacity 0.25s ease, height 0.25s ease;
+}
+
+.internal-link-note a:hover {
+  color: #f5d27a;
+}
+
+.internal-link-note a:hover::after {
+  opacity: 1;
+  height: 2px;
+}
+
+/* === TESTIMONIALS SPACING FIX === */
+
+.premium-testimonials {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.premium-testimonials .testimonials-title {
+  margin-bottom: 18px;
+}
+
+.premium-testimonials .testimonials-intro {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.premium-testimonials .testimonials-grid {
+  margin-top: 20px;
+}
+
+/* === SMALL BUSINESS LANDING PAGE ONLY === */
+
+.small-business-hero {
+  min-height: 100svh;
+}
+
+.small-business-hero .hero-content {
+  align-items: center;
+}
+
+.small-business-hero .hero-copy {
+  max-width: 560px;
+  margin-left: 40px;
+}
+
+.small-business-hero .hero-copy h1 {
+  max-width: 12ch;
+}
+
+.small-business-hero .hero-media img {
+  width: clamp(380px, 42vw, 520px);
+  border-radius: 18px;
+}
+
+/* === SEO LANDING CARD SECTIONS === */
+
+.features-section,
+.audience-section,
+.process-section,
+.seo-cards-section {
+  padding: 100px 0;
+}
+
+.features-grid,
+.process-grid {
+  display: grid;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.features-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.process-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.feature-card,
+.process-card {
+  background: linear-gradient(180deg, rgba(22, 27, 40, 0.82), rgba(13, 17, 27, 0.94));
+  border: 1px solid rgba(212, 163, 74, 0.18);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.24);
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.feature-card h3,
+.process-card h3 {
+  margin-bottom: 10px;
+}
+
+.process-card span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+}
+
+.feature-card:hover,
+.process-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 163, 74, 0.42);
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.34);
+}
+
+/* === RESPONSIVE FIXES === */
+
+@media (max-width: 980px) {
+  .features-grid,
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .small-business-hero .hero-copy {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .features-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-section,
+  .audience-section,
+  .process-section,
+  .seo-cards-section {
+    padding: 72px 0;
+  }
+
+  .small-business-hero .hero-media img {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .small-business-hero .hero-copy h1 {
+    max-width: 11ch;
+  }
+}
+
+ 
