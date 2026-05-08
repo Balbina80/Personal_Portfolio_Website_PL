@@ -2912,3 +2912,67 @@ p {
     max-width: 100%;
   }
 }
+
+/* === CONTACT PAGE MOBILE FIX === */
+
+@media (max-width: 900px) {
+  .contact-box {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .contact-text,
+  .contact-form {
+    width: 100%;
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .contact-text h2 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+    line-height: 1.08;
+  }
+
+  .contact-text p,
+  .contact-details p,
+  .contact-note,
+  .form-note {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 15px 16px;
+  }
+
+  .contact-form textarea {
+    min-height: 150px;
+  }
+
+  .contact-form .btn {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .contact-box {
+    padding: 16px;
+    border-radius: 24px;
+  }
+
+  .contact-text,
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-details p {
+    word-break: break-word;
+  }
+}
