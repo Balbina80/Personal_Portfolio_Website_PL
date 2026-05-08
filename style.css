@@ -3554,3 +3554,171 @@ p {
     line-height: 1.05;
   }
 }
+
+
+/* =========================================================
+   BJ STUDIO AI WORKFLOW STRIP
+========================================================= */
+
+.ai-workflow-strip {
+  position: relative;
+  z-index: 3;
+  margin-top: -12px;
+  padding: 22px 0;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 22, 34, 0.94) 0%,
+    rgba(10, 13, 22, 0.98) 100%
+  );
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+.ai-workflow-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left,
+      rgba(212,163,74,0.10),
+      transparent 38%);
+  pointer-events: none;
+}
+
+.ai-workflow-strip .container {
+  position: relative;
+  z-index: 2;
+}
+
+.ai-workflow-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.ai-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(234,228,217,0.86);
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.ai-chip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212,163,74,0.32);
+  background: rgba(255,255,255,0.05);
+}
+
+.ai-chip strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.ai-chip-icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d4a34a;
+  box-shadow: 0 0 12px rgba(212,163,74,0.55);
+}
+
+/* =========================================================
+   AI INFO BLOCK
+========================================================= */
+
+.ai-workflow-note {
+  margin-top: 42px;
+  padding: 30px;
+  border-radius: 28px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(21, 26, 39, 0.92) 0%,
+      rgba(10, 13, 22, 0.98) 100%
+    );
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.32);
+}
+
+.ai-workflow-note .eyebrow {
+  margin-bottom: 14px;
+}
+
+.ai-workflow-note h3 {
+  margin-bottom: 18px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.ai-workflow-note p {
+  max-width: 72ch;
+  color: rgba(234,228,217,0.78);
+  line-height: 1.75;
+}
+
+/* =========================================================
+   AI LIST ITEMS FOR PRICING
+========================================================= */
+
+.price-list .ai-highlight {
+  color: #f0e2bf;
+}
+
+.price-list .ai-highlight::marker {
+  color: #d4a34a;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .ai-workflow-strip {
+    padding: 18px 0;
+  }
+
+  .ai-workflow-items {
+    gap: 10px;
+  }
+
+  .ai-chip {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    border-radius: 18px;
+    padding: 14px 18px;
+    font-size: 0.9rem;
+  }
+
+  .ai-workflow-note {
+    margin-top: 34px;
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .ai-workflow-note h3 {
+    font-size: clamp(1.6rem, 8vw, 2.2rem);
+  }
+
+  .ai-workflow-note p {
+    font-size: 0.95rem;
+    line-height: 1.68;
+  }
+}
