@@ -3748,3 +3748,10 @@ p {
     grid-template-columns: 1fr;
   }
 }
+/* AJ Fitness original white brand mark: legible stacked tagline */
+.testimonial-logo { max-width: 180px; max-height: 116px; width: 160px; height: auto; object-fit: contain; }
+.testimonial-logo-wrap { min-height: 120px; }
+
+/* AJ Fitness original white brand mark: legible stacked tagline */
+.testimonial-logo { max-width: 180px; max-height: 116px; width: 160px; height: auto; object-fit: contain; }
+.testimonial-logo-wrap { min-height: 120px; }
