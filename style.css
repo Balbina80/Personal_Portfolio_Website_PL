@@ -3755,3 +3755,28 @@ p {
 /* AJ Fitness original white brand mark: legible stacked tagline */
 .testimonial-logo { max-width: 180px; max-height: 116px; width: 160px; height: auto; object-fit: contain; }
 .testimonial-logo-wrap { min-height: 120px; }
+
+/* Four evenly spaced client names across EN and PL */
+.trusted-logos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 0;
+}
+.trusted-logos > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  padding: 8px 20px;
+  text-align: center;
+  line-height: 1.35;
+}
+@media (max-width: 900px) {
+  .trusted-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .trusted-logos > span:nth-child(3) { border-left: 0; }
+}
+@media (max-width: 520px) {
+  .trusted-logos { grid-template-columns: 1fr; }
+  .trusted-logos > span + span { border-left: 0; border-top: 1px solid rgba(45, 34, 22, 0.12); }
+}
